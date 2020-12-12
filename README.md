@@ -1,7 +1,7 @@
 # telman-devops_platform
 telman-devops Platform repository
 
-#Знакомство с Kubernetes, основные понятия и архитектура
+# Знакомство с Kubernetes, основные понятия и архитектура
 ### Домашнее задание
 1) Установил minikube
 2) Запустил k8s кластер `minikube start`
