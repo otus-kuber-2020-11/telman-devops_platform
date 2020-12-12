@@ -15,3 +15,9 @@ telman-devops Platform repository
 10) Запустил в режиме ad-hoc `kubectl run frontend --image 870414/frontend:latest --restart=Never`
 11) Сгенерировал манифест с использованием ad-hoc `kubectl run frontend --image 870414/frontend:latest --restart=Never --dryrun -o yaml > frontend-pod.yaml`
 12) Нашел и устранил ошибку `environment variable`
+
+
+# Механика запуска и взаимодействия контейнеров в Kubernetes
+### Домашнее задание
+1) Установил kind и создал кластер
+
