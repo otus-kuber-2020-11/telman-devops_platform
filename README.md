@@ -20,4 +20,7 @@ telman-devops Platform repository
 # Механика запуска и взаимодействия контейнеров в Kubernetes
 ### Домашнее задание
 1) Установил kind и создал кластер
-
+2) Создал манифест ReplicaSet
+3) Создал 2 магифеста Deployment, для frontend и paymentservice
+4) Добавил два манифеста, аналог blue-green и Rolling Update
+5) Настроил Probes 
