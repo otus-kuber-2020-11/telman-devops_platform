@@ -5,10 +5,15 @@ metadata:
   labels:
     app: paymentservice
 spec:
-  replicas: 3 
+  replicas: 3
   selector:
     matchLabels:
       app: paymentservice
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
   template:
     metadata:
       labels:
