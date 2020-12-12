@@ -1,7 +1,7 @@
 # telman-devops_platform
 telman-devops Platform repository
 
-#Знакомство с Kubernetes, основные понятия и архитектура
+# Знакомство с Kubernetes, основные понятия и архитектура
 ### Домашнее задание
 1) Установил minikube
 2) Запустил k8s кластер `minikube start`
@@ -15,3 +15,12 @@ telman-devops Platform repository
 10) Запустил в режиме ad-hoc `kubectl run frontend --image 870414/frontend:latest --restart=Never`
 11) Сгенерировал манифест с использованием ad-hoc `kubectl run frontend --image 870414/frontend:latest --restart=Never --dryrun -o yaml > frontend-pod.yaml`
 12) Нашел и устранил ошибку `environment variable`
+
+
+# Механика запуска и взаимодействия контейнеров в Kubernetes
+### Домашнее задание
+1) Установил kind и создал кластер
+2) Создал манифест ReplicaSet
+3) Создал 2 магифеста Deployment, для frontend и paymentservice
+4) Добавил два манифеста, аналог blue-green и Rolling Update
+5) Настроил Probes 
