@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment 
+kind: Deployment
 metadata:
   name: paymentservice
   labels:
@@ -20,5 +20,5 @@ spec:
         app: paymentservice
     spec:
       containers:
-      - name: paymentservice
-        image: 870414/hipster-paymentservice:v0.0.1
+        - name: paymentservice
+          image: 870414/hipster-paymentservice:v0.0.1
