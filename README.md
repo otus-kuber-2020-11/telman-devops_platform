@@ -24,3 +24,21 @@ telman-devops Platform repository
 3) Создал 2 магифеста Deployment, для frontend и paymentservice
 4) Добавил два манифеста, аналог blue-green и Rolling Update
 5) Настроил Probes 
+
+# Безопасность и управление доступом
+### Домашнее задание
+task01
+1) Создал Service Account bob, дал ему роль admin в рамках всего кластера
+2) Создал Service Account dave без доступа к кластеру
+
+task02
+1) Создал Namespace prometheus
+2) Создал Service Account carol в этом Namespace
+3) Дал всем Service Account в Namespace prometheus возможность делать get, list, watch в отношении Pods всего кластера
+
+task03
+1) Создал Namespace dev
+2) Создал Service Account jane в Namespace dev
+3) Дал jane роль admin в рамках Namespace dev
+4) Создал Service Account ken в Namespace dev
+5) Дал ken роль view в рамках Namespace dev
