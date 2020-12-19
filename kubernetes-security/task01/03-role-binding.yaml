@@ -3,15 +3,14 @@ apiVersion: rbac.authorization.k8s.io/v1
 # You need to already have a Role named "pod-reader" in that namespace.
 kind: ClusterRoleBinding
 metadata:
-  name: cluster-admin
-  namespace: default
+  name: bob-admin
 subjects:
-- kind: ClusterRole #this must be Role or ClusterRole
-  name: admin-role # this must match the name of the Role or ClusterRole you wish to bind to
-  apiGroup: rbac.authorization.k8s.io
+# "roleRef" specifies the binding to a Role / ClusterRole
+- kind: ServiceAccount
+  name: bob # "name" is case sensitive
+  namespace: default
 # You can specify more than one "subject"
 roleRef:
-  # "roleRef" specifies the binding to a Role / ClusterRole
-  kind: ServiceAccount
-  name: bob # "name" is case sensitive
+  kind: ClusterRole #this must be Role or ClusterRole
+  name: admin-role # this must match the name of the Role or ClusterRole you wish to bind to
   apiGroup: rbac.authorization.k8s.io
