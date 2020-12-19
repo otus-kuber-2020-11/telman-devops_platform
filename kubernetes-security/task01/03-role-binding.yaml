@@ -12,5 +12,5 @@ subjects:
 # You can specify more than one "subject"
 roleRef:
   kind: ClusterRole #this must be Role or ClusterRole
-  name: admin-role # this must match the name of the Role or ClusterRole you wish to bind to
+  name: cluster-admin # this must match the name of the Role or ClusterRole you wish to bind to
   apiGroup: rbac.authorization.k8s.io
