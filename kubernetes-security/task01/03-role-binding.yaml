@@ -8,7 +8,7 @@ subjects:
   # "roleRef" specifies the binding to a Role / ClusterRole
   - kind: ServiceAccount
     name: bob # "name" is case sensitive
-    # namespace: default
+    namespace: default
 # You can specify more than one "subject"
 roleRef:
   kind: ClusterRole #this must be Role or ClusterRole
