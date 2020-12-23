@@ -67,3 +67,9 @@ iptables --list -nv -t nat
 5) Установил MetalLB, настроил балансировщик с помощью манифеста ConfigMap
 6) Установил "коробочный" ingress-nginx
 7) Применил nginx-lb, Headless-сервис, правила Ingress
+
+# Хранение данных в Kubernetes: Volumes, Storages, Statefull-приложения
+### Домашнее задание
+1) Развернул StatefulSet с MinIO
+2) Применил конфигурацию Headless Service, для доступа к minio изнутри кластера
+3) Написал и применил Secret манифест, для скрытия "чувствительных" данных
