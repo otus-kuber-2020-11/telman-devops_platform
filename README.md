@@ -42,3 +42,28 @@ task03
 3) Дал jane роль admin в рамках Namespace dev
 4) Создал Service Account ken в Namespace dev
 5) Дал ken роль view в рамках Namespace dev
+
+# Сетевая подсистема Kubernetes
+### Домашнее задание
+1) Добавил проверку readinessProbe и livenessProbe для Pod
+2) Применил манифест Deployment с 3я репликами
+3) Добавил RollingUpdate стратегию для Deployment манифеста
+4) Написал Service ClusterIP, включили IPVS, обновили iptables 
+```
+/tmp/iptables.cleanup
+
+ *nat
+ -A POSTROUTING -s 172.17.0.0/16 ! -o docker0 -j MASQUERADE
+ COMMIT
+ *filter
+ COMMIT
+ *mangle
+ COMMIT
+
+iptables-restore /tmp/iptables.cleanup
+
+iptables --list -nv -t nat
+```
+5) Установил MetalLB, настроил балансировщик с помощью манифеста ConfigMap
+6) Установил "коробочный" ingress-nginx
+7) Применил nginx-lb, Headless-сервис, правила Ingress
